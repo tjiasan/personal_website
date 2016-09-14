@@ -19,6 +19,6 @@ from home_page import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_page),
+    url(r'^$', views.home_page , name = 'home'),
  
 ]
