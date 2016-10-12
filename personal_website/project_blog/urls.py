@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from . import views
 
 urlpatterns = [
-  
-
+ #project blog urls
+    url(r'^web/overview$', views.web_dev_main  ,name= 'web_dev_overview'),
+    url(r'^biology/overview$', views.biology_main  ,name= 'biology_overview'),
+    url(r'^machinelearning/overview$', views.machine_main  ,name= 'machine_overview'),
 ]
