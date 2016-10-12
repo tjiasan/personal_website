@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'resume.apps.ResumeConfig',
     'project_blog.apps.ProjectBlogConfig',
     'home_page.apps.HomePageConfig',
     'django.contrib.admin',

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class= "col-md-1 hidden-xs hidden-sm visible-md-1">
+      </div>
+
+
+      <div class= "col-sm-2 hidden-xs visible-sm-2">
+
+        <div class="sidebar">
+            <ul class= "nav nav-sidebar">
+
+
+              <li class="collapsed hide-btn2 hide-btn3" data-toggle="collapse" data-target="#webapps" >
+                <a href="#"> Web Development</a>
+              </li>
+                <ul class="sub-menu collapse" id="webapps">
+                <hr>
+                  <li><a href="#"> To Do List</a></li>
+
+                <hr>
+                  <li><a href="#"> Twitter Updater</a></li>
+                  <hr>
+                </ul>
+
+
+
+              <li class ="collapsed hide-btn1 hide-btn3" data-toggle="collapse" data-target="#machine" >
+                    <a href="#" > Machine Learning  </a>
+              </li>
+                <ul class="sub-menu collapse" id="machine">
+                    <hr>
+                  <li><a href="#"> Introduction </a></li>
+                  <hr>
+                  <li><a href="#"> Artificial Neural Networks</a></li>
+                  <hr>
+                  <li><a href="#"> DeepQ: reinforcement learning </a></li>
+                  <hr>
+                <li><a href="#">Experiment: limitations of ANN/DeepQ </a></li>
+                  <hr>
+                <li><a href="#">Implementation of DeepQ </a></li>
+                  <hr>
+                <li><a href="#">what is intelligence?</a></li>
+                  <hr>
+                </ul>
+
+
+
+
+              <li class ="collapsed hide-btn1 hide-btn2" data-toggle="collapse" data-target="#biology" >
+                    <a href="#" > Biology  </a>
+              </li>
+                <ul class="sub-menu collapse hide-btn" id="biology">
+                  <hr>
+
+                  <li><a href="#"> Introduction </a></li>
+                  <hr>
+                  <li><a href="#"> Big Data Statistics</a></li>
+                  <hr>
+                  <li><a href="#"> Cell Counting: Image Processing with Open CV</a></li>
+                  <hr>
+                  <li><a href="#"> Measuring Cell Surface Hydrophobicty the hard way</a></li>
+                  <hr>
+                  <li><a href="#"> The follow up experiments</a></li>
+                  <hr>
+
+                </ul>
+          </div>
+
+      </div>
+
+
+
+{% block content %}
+{% endblock %}
+
+
+
+
+</div>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $(".hide-btn1").click(function(){
+            $("#webapps").collapse('hide');
+    });
+
+        $(".hide-btn2").click(function(){
+            $("#machine").collapse('hide');
+    });
+        $(".hide-btn3").click(function(){
+            $("#biology").collapse('hide');
+    });
+
+
+
+
+});
+</script>
+
+
+{% endblock %}
+
+
+
