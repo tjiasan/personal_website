@@ -19,7 +19,10 @@ from . import views
 
 urlpatterns = [
  #project blog urls
-    url(r'^web/overview$', views.web_dev_main  ,name= 'web_dev_overview'),
-    url(r'^biology/overview$', views.biology_main  ,name= 'biology_overview'),
-    url(r'^machinelearning/overview$', views.machine_main  ,name= 'machine_overview'),
+    url(r'^web/(?P<web_id>[0-9]+)$', views.web_dev_main  ,name= 'web_dev'),
+    url(r'^biology/(?P<bio_id>[0-9]+)$', views.biology_main  ,name= 'biology'),
+    url(r'^machinelearning/(?P<machine_id>[0-9]+)$', views.machine_main  ,name= 'machine'),
 ]
+##-(?P<machine_title>[abc]+)
+##-(?P<biology_title>[abc]+)
+##-(?P<web_title>[abc]+)

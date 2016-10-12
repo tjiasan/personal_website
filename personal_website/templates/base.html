@@ -42,9 +42,9 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a href="{% url 'web_dev_overview' %}"> Web Development</a></li>
-                  <li><a href="{% url 'biology_overview' %}"> Machine learning </a></li>
-                  <li><a href="{% url 'machine_overview' %}"> Biology</a></li>
+                  <li><a href="{% url 'web_dev' web_id=1 %}"> Web Development</a></li>
+                  <li><a href="{% url 'biology' bio_id=1 %}"> Machine learning </a></li>
+                  <li><a href="{% url 'machine' machine_id=1 %}"> Biology</a></li>
 
                 </ul>
               <li><a href="{% url "resume_main"  %}">Resume</a></li>
