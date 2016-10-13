@@ -19,6 +19,6 @@ from . import views
 
 urlpatterns = [
  #resume URLS
-   url(r'^$', views.resume_main , name = 'resume_main'),
+   url(r'^(?P<slug>[\w-]+)$', views.resume , name = 'resume'),
    
 ]
