@@ -21,6 +21,7 @@ from home_page import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home_page , name = 'home'),
+    url(r'^contact/$', views.contact, name= 'contact'),
 
     url(r'^projects/',include('project_blog.urls')),
     url(r'^resume/', include('resume.urls')),
