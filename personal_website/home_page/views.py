@@ -9,7 +9,7 @@ def home_page(request):
 
     template = 'home_page/home_page.html'
     
-    return render (request, template)
+    return render (request, template, {'selector':'about'})
 
 
 def contact(request):
@@ -27,6 +27,7 @@ def contact(request):
             
             messages.success(request,"your message has been sucessfully sent")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+         
         else:
             errors= form.errors.as_data()
             msg= ""

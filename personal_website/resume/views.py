@@ -11,6 +11,6 @@ def resume(request,slug):
     active= str(content.title)
         
     resumelist = Resume.objects.values('title','slug')
-    return render (request,template,{'content':content, 'resumelist':resumelist, 'active':active} )
+    return render (request,template,{'content':content, 'resumelist':resumelist, 'active':active, 'selector':'resume'} )
 
 # Create your views here.

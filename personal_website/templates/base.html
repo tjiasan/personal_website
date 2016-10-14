@@ -34,9 +34,9 @@
           </div>
           <div class ="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="{% url 'home' %}">About</a></li>
+              <li id="about"><a href="{% url 'home' %}">About</a></li>
 
-              <li class="dropdown">
+              <li id= "projects" class="dropdown">
                 <a href="#" class ="dropdown-toggle" data-toggle="dropdown"> Projects
                     <b= class ="caret"> </b>
                 </a>
@@ -47,7 +47,7 @@
                   <li><a href="{% url 'biology' slug='overview' %}"> Biology</a></li>
 
                 </ul>
-              <li><a href="{% url "resume" slug="main" %}">Resume</a></li>
+              <li id= "resume"><a href="{% url "resume" slug="main" %}">Resume</a></li>
               <li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
               </ul>
 
@@ -79,6 +79,11 @@
     </div>
 
 <!== Place bootstrap code here==>
+
+<script>
+$("#{{selector}}").addClass("active");
+</script>
+
 {% if messages %}
 
 <script>

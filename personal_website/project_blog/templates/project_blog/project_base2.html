@@ -18,8 +18,20 @@
             <ul class= "nav nav-sidebar">
 
 
-              <li class="collapsed hide-btn2 hide-btn3" data-toggle="collapse" data-target="#webapps" id= "web">
-                <a href="#"> Web Development</a>
+              <li class="collapsed hide-btn2 hide-btn3" data-toggle="collapse" data-target="#webapps" >
+
+              {% if section == "#webapps" %}
+                <div class= "highlight">
+                    <a href="#"> Web Development</a>
+                </div>
+                <br>
+              {% else %}
+              <div>
+              <a href="#"> Web Development</a>
+              </div>
+              <br>
+              {% endif %}
+
               </li>
                 <ul class="sub-menu collapse" id="webapps">
                 <hr>
@@ -40,8 +52,20 @@
 
 
 
-              <li class ="collapsed hide-btn1 hide-btn3" data-toggle="collapse" data-target="#machine" id ="mac">
+              <li class ="collapsed hide-btn1 hide-btn3" data-toggle="collapse" data-target="#machine" >
+              {% if section == "#machine" %}
+                <div class= "highlight">
                     <a href="#" > Machine Learning  </a>
+                </div>
+              <br>
+              {% else %}
+              <div>
+              <a href="#" > Machine Learning  </a>
+              </div>
+              <br>
+              {% endif %}
+
+
               </li>
                 <ul class="sub-menu collapse" id="machine">
                     <hr>
@@ -61,8 +85,19 @@
                 </ul>
 
 
-              <li class ="collapsed hide-btn1 hide-btn2" data-toggle="collapse" data-target="#biology" id ="bio">
+              <li class ="collapsed hide-btn1 hide-btn2" data-toggle="collapse" data-target="#biology" >
+
+              {% if section == "#biology" %}
+              <div class= "highlight centered">
                     <a href="#" > Biology  </a>
+              </div>
+             <br>
+             {% else %}
+             <div>
+             <a href="#" >  Biology  </a>
+             </div>
+             <br>
+             {% endif %}
               </li>
                 <ul class="sub-menu collapse hide-btn" id="biology">
                   <hr>
@@ -97,26 +132,6 @@ $("{{section}}").collapse('show');
 
 
 </div>
-{% if section == "#machine" %}
-<script>
-$("#mac").addClass("active");
-</script>
-{% endif %}
-
-{% if section == "#webapps" %}
-<script>
-$("#web").addClass("active");
-</script>
-{% endif %}
-
-{% if section == "#biology" %}
-<script>
-$("#bio").addClass("active");
-</script>
-{% endif %}
-
-
-
 
 <script type="text/javascript">
         $(document).ready(function(){
