@@ -25,6 +25,7 @@ urlpatterns = [
 
     url(r'^projects/',include('project_blog.urls')),
     url(r'^resume/', include('resume.urls')),
+    
    
     
  
