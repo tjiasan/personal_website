@@ -3,7 +3,32 @@
 {% block content %}
 
 {{content.content|safe}}
+<br>
+<br>
+<br>
+<span>
+{% if previous != None %}
+<a href="{%url 'web_dev' slug=previous %}" id="blah"><b>Previous</b></a>
+{% endif %}
+</span>
 
+{% if Next != None and previous != None %}
+<span class= "seperator">
+|
+</span>
+{% endif %}
+
+<span>
+{% if Next != None %}
+<a href="{%url 'web_dev' slug=Next %}" id="blah"><b>Next</b></a>
+{% endif %}
+
+</span>
 
 
 {% endblock %}
+
+
+
+
+

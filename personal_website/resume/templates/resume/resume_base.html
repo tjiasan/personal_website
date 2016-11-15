@@ -36,8 +36,32 @@
         </div>
 
 <div class= "col-sm-8 visible-sm-8">
-{% block content %}
-{% endblock %}
+<div>
+  {% block content %}
+  {% endblock %}
+</div>
+  <div>
+    <br>
+    <br>
+    <br>
+
+    {% if previous != None %}
+    <a href="{%url 'resume' slug=previous %}" id="blah"><b>Previous</b></a>
+    {% endif %}
+
+    {% if Next != None and previous != None %}
+    <span class= "seperator">
+    |
+    </span>
+    {% endif %}
+
+
+    {% if Next != None %}
+    <a href="{%url 'resume' slug=Next %}" id="blah"><b>Next</b></a>
+    {% endif %}
+
+  </div>
+
 </div>
 
 

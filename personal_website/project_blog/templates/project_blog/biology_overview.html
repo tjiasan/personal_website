@@ -2,4 +2,27 @@
 
 {% block content %}
 {{content.content|safe}}
+
+<br>
+<br>
+<br>
+
+{% if previous != None %}
+<a href="{%url 'biology' slug=previous %}" id="blah"><b>Previous</b></a>
+{% endif %}
+
+{% if Next != None and previous != None %}
+<span class= "seperator">
+|
+</span>
+{% endif %}
+
+
+{% if Next != None %}
+<a href="{%url 'biology' slug=Next %}" id="blah"><b>Next</b></a>
+{% endif %}
+
 {% endblock %}
+
+
+
